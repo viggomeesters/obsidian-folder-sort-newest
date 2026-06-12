@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-const PLUGIN_ID = "folder-sort-newest";
+const PLUGIN_ID = "folder-sort-z-to-a";
 const TEST_VAULT_NAME = "obsidian-test-vault";
 const DEFAULT_TARGET = `/mnt/c/Users/viggo/github/${TEST_VAULT_NAME}/.obsidian/plugins/${PLUGIN_ID}`;
 const ARTIFACTS = ["main.js", "manifest.json", "styles.css"];

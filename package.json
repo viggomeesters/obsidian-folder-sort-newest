@@ -1,6 +1,6 @@
 {
-  "name": "obsidian-folder-sort-newest",
-  "version": "0.1.1",
+  "name": "obsidian-folder-sort-z-to-a",
+  "version": "0.2.0",
   "description": "Sort folders Z-to-A in the native File Explorer.",
   "license": "MIT",
   "author": "Viggo Meesters",

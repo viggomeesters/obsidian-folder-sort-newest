@@ -4,7 +4,7 @@ import process from "node:process";
 const production = process.env.NODE_ENV === "production";
 
 await esbuild.build({
-  banner: { js: "/* Folder Sort Newest for Obsidian - generated bundle */" },
+  banner: { js: "/* Folder Sort Z to A for Obsidian - generated bundle */" },
   bundle: true,
   entryPoints: ["src/main.ts"],
   external: ["obsidian"],

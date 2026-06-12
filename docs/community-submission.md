@@ -3,12 +3,12 @@
 Submit this repository URL:
 
 ```text
-https://github.com/viggomeesters/obsidian-folder-sort-newest
+https://github.com/viggomeesters/obsidian-folder-sort-z-to-a
 ```
 
 Before submission:
 
-- `manifest.json` id is `folder-sort-newest`.
+- `manifest.json` id is `folder-sort-z-to-a`.
 - `README.md`, `LICENSE`, `CONTRIBUTING.md`, and `SECURITY.md` are present.
 - `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`, and `npm run community:check` pass.
 - Release assets include `main.js`, `manifest.json`, and `styles.css`.

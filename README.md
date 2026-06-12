@@ -1,4 +1,4 @@
-# Folder Sort Newest
+# Folder Sort Z to A
 
 Sort folders Z-to-A in Obsidian's native File Explorer without changing files or vault content.
 
@@ -26,7 +26,7 @@ npm run community:check
 `npm run sync:test-vault` copies only `main.js`, `manifest.json`, and `styles.css` to:
 
 ```text
-/mnt/c/Users/viggo/github/obsidian-test-vault/.obsidian/plugins/folder-sort-newest
+/mnt/c/Users/viggo/github/obsidian-test-vault/.obsidian/plugins/folder-sort-z-to-a
 ```
 
 The sync script refuses `Syncthing/vault` targets.

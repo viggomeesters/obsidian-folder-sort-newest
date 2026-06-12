@@ -2,7 +2,7 @@ import { spawnSync } from "node:child_process";
 import os from "node:os";
 import path from "node:path";
 
-const PLUGIN_ID = "folder-sort-newest";
+const PLUGIN_ID = "folder-sort-z-to-a";
 const DEFAULT_PORT = 9222;
 
 async function main() {
@@ -61,10 +61,13 @@ async function browserSmoke({ pluginId }) {
 
   assert(window.app?.vault?.getName?.() === "obsidian-test-vault", "Wrong vault is open", { vault: window.app?.vault?.getName?.() });
 
-  if (window.app.plugins.plugins[pluginId]) {
-    await window.app.plugins.disablePlugin(pluginId);
-    await window.app.plugins.unloadPlugin(pluginId);
-    await sleep(500);
+  await window.app.plugins.loadManifests?.();
+  for (const id of ["folder-sort-newest", pluginId]) {
+    if (window.app.plugins.plugins[id]) {
+      await window.app.plugins.disablePlugin(id);
+      await window.app.plugins.unloadPlugin(id);
+      await sleep(500);
+    }
   }
 
   const before = getFolderOrder();

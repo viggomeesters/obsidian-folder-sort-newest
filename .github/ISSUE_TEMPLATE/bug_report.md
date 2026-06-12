@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report a problem with Folder Sort Newest
+about: Report a problem with Folder Sort Z to A
 title: "[Bug]: "
 labels: bug
 assignees: ""
@@ -27,6 +27,6 @@ If possible, attach or describe a minimal synthetic example. Do not include priv
 ## Environment
 
 - App version:
-- Folder Sort Newest version:
+- Folder Sort Z to A version:
 - Desktop or mobile:
 - Operating system:

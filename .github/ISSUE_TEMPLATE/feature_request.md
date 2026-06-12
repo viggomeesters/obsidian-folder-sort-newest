@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an improvement for Folder Sort Newest
+about: Suggest an improvement for Folder Sort Z to A
 title: "[Feature]: "
 labels: enhancement
 assignees: ""

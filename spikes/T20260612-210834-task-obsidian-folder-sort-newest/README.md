@@ -1,4 +1,4 @@
-# T20260612-210834-task-obsidian-folder-sort-newest
+# T20260612-210834-task-obsidian-folder-sort-z-to-a
 
 ## Task
 

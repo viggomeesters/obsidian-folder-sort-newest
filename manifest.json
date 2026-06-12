@@ -1,7 +1,7 @@
 {
-  "id": "folder-sort-newest",
-  "name": "Folder Sort Newest",
-  "version": "0.1.1",
+  "id": "folder-sort-z-to-a",
+  "name": "Folder Sort Z to A",
+  "version": "0.2.0",
   "minAppVersion": "1.5.0",
   "description": "Sort folders Z-to-A in the native File Explorer without changing files or vault content.",
   "author": "Viggo Meesters",

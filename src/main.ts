@@ -14,7 +14,7 @@ type FileExplorerLeaf = {
 };
 
 const FILE_EXPLORER_VIEW_TYPE = "file-explorer";
-const PATCH_MARK = Symbol.for("folder-sort-newest.patch");
+const PATCH_MARK = Symbol.for("folder-sort-z-to-a.patch");
 
 type PatchState = {
   originalGetSortedFolderItems: FileExplorerView["getSortedFolderItems"];
@@ -94,8 +94,8 @@ export default class FolderSortNewestPlugin extends Plugin {
   private warnUnsupportedInternals(): void {
     if (this.warningShown) return;
     this.warningShown = true;
-    console.warn("Folder Sort Newest: File Explorer internals are not supported in this Obsidian version.");
-    new Notice("Folder Sort Newest cannot patch this Obsidian File Explorer version.");
+    console.warn("Folder Sort Z to A: File Explorer internals are not supported in this Obsidian version.");
+    new Notice("Folder Sort Z to A cannot patch this Obsidian File Explorer version.");
   }
 }
 

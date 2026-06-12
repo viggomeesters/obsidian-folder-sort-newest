@@ -5,10 +5,10 @@ const manifest = JSON.parse(await fs.readFile("manifest.json", "utf8"));
 const packageJson = JSON.parse(await fs.readFile("package.json", "utf8"));
 
 const assertions = [
-  [manifest.id === "folder-sort-newest", "manifest id must remain one-purpose"],
+  [manifest.id === "folder-sort-z-to-a", "manifest id must remain one-purpose"],
   [manifest.version === packageJson.version, "manifest version must match package version"],
   [main.includes("getSortedFolderItems"), "bundle must patch File Explorer getSortedFolderItems"],
-  [main.includes("folder-sort-newest.patch"), "bundle must include patch marker for safe restore"],
+  [main.includes("folder-sort-z-to-a.patch"), "bundle must include patch marker for safe restore"],
   [!main.includes("newest-files-view"), "bundle must not include Newest Files code"],
 ];
 
@@ -18,4 +18,4 @@ if (failures.length > 0) {
   process.exit(1);
 }
 
-console.log("Folder Sort Newest smoke checks passed.");
+console.log("Folder Sort Z to A smoke checks passed.");

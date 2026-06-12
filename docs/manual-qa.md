@@ -15,7 +15,7 @@ npm run community:check
 
 Expected:
 
-- plugin loads from `.obsidian/plugins/folder-sort-newest`;
+- plugin loads from `.obsidian/plugins/folder-sort-z-to-a`;
 - supported files open in the plugin view;
 - no runtime network, clipboard, git, or patch-apply behavior is introduced;
 - release assets are exactly `main.js`, `manifest.json`, and `styles.css`.

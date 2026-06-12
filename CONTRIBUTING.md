@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve Folder Sort Newest.
+Thanks for helping improve Folder Sort Z to A.
 
 ## Local setup
 
@@ -13,7 +13,7 @@ npm run build
 npm run community:check
 ```
 
-For manual testing, copy the built runtime files into `.obsidian/plugins/folder-sort-newest/` in a test vault, reload the app, and open supported fixture files.
+For manual testing, copy the built runtime files into `.obsidian/plugins/folder-sort-z-to-a/` in a test vault, reload the app, and open supported fixture files.
 
 ## Pull requests
 

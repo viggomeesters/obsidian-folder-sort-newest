@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.1
+## 0.1.0
 
-- Initial community-review-ready scaffold for Folder Sort Newest.
+- Initial community-review-ready release for Folder Sort Newest.
 - Added runtime plugin bundle, manifest, styles, tests, documentation, community checks, and release workflow.

@@ -1,28 +1,26 @@
 # Folder Sort Newest
 
-Spike plugin for Obsidian's native File Explorer folder ordering.
+Sort folders Z-to-A in Obsidian's native File Explorer without changing files or vault content.
 
-## Goal
+## Features
 
-Validate whether a one-purpose plugin can make folders in the native File Explorer sort Z-to-A without writing vault content or bundling unrelated file-explorer behavior.
+- keeps folders grouped before files;
+- sorts folder names Z-to-A;
+- preserves the native file ordering behavior;
+- restores native File Explorer behavior when the plugin unloads;
+- does not create, rename, delete, or modify vault files.
 
-## Verdict
-
-**PARTIAL**: feasible as a small internal patch, not as a stable public API integration.
-
-Obsidian's native File Explorer exposes an internal `getSortedFolderItems()` method. The native implementation always puts folders before files and sorts folders A-to-Z independently of the active file sort setting. A plugin can monkey-patch that method and reorder only folder items Z-to-A while leaving files in the native order.
-
-This is non-destructive and worked in the Windows-local `obsidian-test-vault`, but it depends on internal/minified File Explorer methods and should be treated as brittle across Obsidian releases.
-
-## Commands
+## Development
 
 ```bash
 npm install
 npm run lint
 npm run typecheck
 npm test
+npm run build
 npm run sync:test-vault
 npm run smoke:cdp
+npm run community:check
 ```
 
 `npm run sync:test-vault` copies only `main.js`, `manifest.json`, and `styles.css` to:
@@ -31,13 +29,12 @@ npm run smoke:cdp
 /mnt/c/Users/viggo/github/obsidian-test-vault/.obsidian/plugins/folder-sort-newest
 ```
 
-It refuses `Syncthing/vault` targets.
+The sync script refuses `Syncthing/vault` targets.
 
-## Recommendation
+## Release
 
-Do not publish this immediately as a normal release. If this remains useful after a few real Obsidian sessions, harden it with:
+Create a GitHub release whose tag exactly matches `manifest.json.version` and attach:
 
-- explicit supported Obsidian version notes;
-- a setting to disable/restore instantly;
-- a console warning when the File Explorer internal method shape changes;
-- a CDP smoke test in the release checklist.
+- `main.js`
+- `manifest.json`
+- `styles.css`

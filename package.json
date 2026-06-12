@@ -1,7 +1,7 @@
 {
   "name": "obsidian-folder-sort-newest",
-  "version": "0.0.1",
-  "description": "Spike plugin for Z-to-A folder ordering in Obsidian's native File Explorer.",
+  "version": "0.1.0",
+  "description": "Sort folders Z-to-A in the native File Explorer.",
   "license": "MIT",
   "author": "Viggo Meesters",
   "type": "module",

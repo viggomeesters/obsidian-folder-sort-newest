@@ -3,7 +3,7 @@
   "name": "Folder Sort Newest",
   "version": "0.0.1",
   "minAppVersion": "1.5.0",
-  "description": "Spike: sort folders Z-to-A in Obsidian's native File Explorer without changing files or vault content.",
+  "description": "Sort folders Z-to-A in the native File Explorer without changing files or vault content.",
   "author": "Viggo Meesters",
   "isDesktopOnly": false
 }

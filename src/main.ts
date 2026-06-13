@@ -27,6 +27,7 @@ type PatchedPrototype = {
 
 export default class FolderSortNewestPlugin extends Plugin {
   private patchedPrototype: PatchedPrototype | null = null;
+  private sortTimer: number | null = null;
   private warningShown = false;
 
   async onload(): Promise<void> {
@@ -36,8 +37,12 @@ export default class FolderSortNewestPlugin extends Plugin {
   }
 
   onunload(): void {
+    if (this.sortTimer !== null) {
+      window.clearTimeout(this.sortTimer);
+      this.sortTimer = null;
+    }
     this.restoreFileExplorer();
-    this.requestFileExplorerSort();
+    this.requestFileExplorerSort(true);
   }
 
   private applyPatchAndSort(): void {
@@ -86,9 +91,18 @@ export default class FolderSortNewestPlugin extends Plugin {
     return leaf?.view ?? null;
   }
 
-  private requestFileExplorerSort(): void {
-    const view = this.getFileExplorerView();
-    if (typeof view?.requestSort === "function") view.requestSort();
+  private requestFileExplorerSort(immediate = false): void {
+    if (this.sortTimer !== null) return;
+    const sort = () => {
+      this.sortTimer = null;
+      const view = this.getFileExplorerView();
+      if (typeof view?.requestSort === "function") view.requestSort();
+    };
+    if (immediate) {
+      sort();
+      return;
+    }
+    this.sortTimer = window.setTimeout(sort, 50);
   }
 
   private warnUnsupportedInternals(): void {

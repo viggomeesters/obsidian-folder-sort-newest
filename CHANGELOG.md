@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1
+
+- Debounced File Explorer sort requests so repeated layout changes do not trigger redundant resort work.
+- Kept unload restoration immediate so native ordering is restored without leaving delayed work behind.
+
 ## 0.2.0
 
 - Renamed the plugin ID and public naming to `folder-sort-z-to-a` / Folder Sort Z to A so the community listing matches the actual behavior.
